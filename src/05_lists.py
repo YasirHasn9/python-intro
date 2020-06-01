@@ -1,14 +1,16 @@
 # For the exercise, look up the methods and functions that are available for use
 # with Python lists.
 
-x = [1, 2, 3]
+x = [1, 2, 3 , 4]
 y = [8, 9, 10]
 
 # For the following, DO NOT USE AN ASSIGNMENT (=).
-
 # Change x so that it is [1, 2, 3, 4]
 # YOUR CODE HERE
+x.append(4)
 print(x)
+
+name = [name for name in names ]
 
 # Using y, change x so that it is [1, 2, 3, 4, 8, 9, 10]
 # YOUR CODE HERE
