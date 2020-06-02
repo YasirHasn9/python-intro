@@ -7,17 +7,17 @@ the list should be populated.
 Take a look at https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions
 for more info regarding list comprehensions.
 """
-
+'''[(var1, var2) for var1 in (something) for y in (something else) condition] '''
 # Write a list comprehension to produce the array [1, 2, 3, 4, 5]
 
-y = []
+y = [num for num in range(1,6)]
 
 print (y)
 
 # Write a list comprehension to produce the cubes of the numbers 0-9:
 # [0, 1, 8, 27, 64, 125, 216, 343, 512, 729]
 
-y = []
+y = [num**3 for num in range(10)]
 
 print(y)
 
@@ -26,7 +26,7 @@ print(y)
 
 a = ["foo", "bar", "baz"]
 
-y = []
+y = [letter.upper() for letter in a]
 
 print(y)
 
@@ -36,6 +36,6 @@ print(y)
 x = input("Enter comma-separated numbers: ").split(',')
 
 # What do you need between the square brackets to make it work?
-y = []
+y = [num for num in x if x % 2 == 0]
 
 print(y)
