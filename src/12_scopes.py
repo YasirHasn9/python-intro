@@ -6,6 +6,8 @@ x = 12
 
 def change_x():
     x = 99
+    print(x)
+    return x
 
 change_x()
 
@@ -20,8 +22,8 @@ def outer():
 
     def inner():
         y = 999
-
-    inner()
+        print(y)
+    return inner()
 
     # This prints 120. What do we have to change in inner() to get it to print
     # 999?
