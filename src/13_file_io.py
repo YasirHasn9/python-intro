@@ -20,7 +20,9 @@ with open("foo.txt") as f:
 # sure that it contains what you expect it to contain
 # YOUR CODE HERE
 
-# open("bar.txt" , "w")
+open("bar.txt" , "w")
 with open("bar.txt") as b:
     read_b = b.read()
     print(read_b)
+
+

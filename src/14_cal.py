@@ -6,11 +6,17 @@ https://docs.python.org/3.6/library/calendar.html
 Write a program that accepts user input of the form
   `14_cal.py [month] [year]`
 and does the following:
- - If the user doesn't specify any input, your program should
-   print the calendar for the current month. The 'datetime'
-   module may be helpful for this.
+
+
+
+  - If the user doesn't specify any input, your program should
+    print the calendar for the current month. The 'datetime'
+    module may be helpful for this.
+
  - If the user specifies one argument, assume they passed in a
    month and render the calendar for that month of the current year.
+
+
  - If the user specifies two arguments, assume they passed in
    both the month and the year. Render the calendar for that
    month and year.
@@ -24,9 +30,34 @@ optional, as this is a common convention in documentation.
 
 This would mean that from the command line you would call `python3 14_cal.py 4 2015` to 
 print out a calendar for April in 2015, but if you omit either the year or both values, 
-it should use today’s date to get the month and year.
-"""
+it should use today’s date to get the month and year."""
 
+
+# this is returning a list of string contianing all the commend that been
+# written after the python in the terminal
+# the commed line after the python  start at 0
+# and since we run the file after the commend line that it gonna return the file name
 import sys
 import calendar
 from datetime import datetime
+l = len(sys.argv)
+if l == 1:
+    print(l)
+    month = datetime.now().month
+    year = datetime.now().year
+
+elif l == 2:
+    month = int(sys.argv[1])
+    year = datetime.now().year
+
+elif l == 3:
+    month = int(sys.argv[1])
+    year = int(sys.argv[2])
+
+else:
+    print("Usage")
+    sys.exit(1)
+
+cal = calendar.TextCalendar()
+
+cal.prmonth(year, month)
